@@ -318,54 +318,85 @@ input:checked + .slider:before {
     color: var(--primary-color);
 }
 
+/* About Section */
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    justify-content: center;
+    margin-top: 3rem;
 }
 
 .team-member {
-    background-color: var(--card-bg);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: 2rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .team-member:hover {
     transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .member-photo {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     margin: 0 auto 1.5rem;
     overflow: hidden;
-    border: 3px solid var(--accent-color);
+    border: 4px solid var(--accent-color);
 }
 
-.placeholder {
-    background-color: #ddd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #999;
-    font-size: 3rem;
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
 }
 
 .team-member h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+    color: var(--primary-color);
+}
+
+.team-member h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
 }
 
 .team-member p {
+    margin-bottom: 1.5rem;
     color: var(--text-color);
-    opacity: 0.8;
 }
 
-/* Contact Section */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    transition: all 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
 .contact-content {
     max-width: 800px;
     width: 100%;
